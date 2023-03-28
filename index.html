@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,15 +9,29 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <title>Vue Hello</title>
 </head>
+
 <body>
-    
+
     <div id="app">
 
         <h1 :class="color">{{ message }}</h1>
         <img :src="imgSrc" :alt="imgAlt">
 
+        <div>
+            <label :class="color" for="username">{{text}}</label>
+            <input type="text" id="username" @keyup="handleKeyup">
+        </div>
+
+        <div :class="chooise" class="container">Qual è il tuo colore preferito tra questi due?
+            <div>
+                <button @click="changeToYellow">{{yellow}}</button>
+                <button @click="changeToGreen">{{green}}</button>
+            </div>
+        </div>
+
     </div>
 
     <script src="js/script.js"></script>
 </body>
+
 </html>
